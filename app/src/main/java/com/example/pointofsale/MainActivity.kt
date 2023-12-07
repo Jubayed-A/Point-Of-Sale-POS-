@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,11 +27,13 @@ class MainActivity : AppCompatActivity() {
                 val total = qty * price
 
                 val intentOutput = Intent(this, OutputActivity::class.java)
-                intentOutput.putExtra("name", name.toString())
+                intentOutput.putExtra("name", name)
                 intentOutput.putExtra("qty", qty.toString())
                 intentOutput.putExtra("price", price.toString())
                 intentOutput.putExtra("total", total.toString())
                 startActivity(intentOutput)
+            } else{
+                Toast.makeText(this, "Please Input all the fill.", Toast.LENGTH_SHORT).show()
             }
 
         }
