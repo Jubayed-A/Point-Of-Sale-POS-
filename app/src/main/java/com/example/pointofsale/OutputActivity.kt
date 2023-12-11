@@ -1,29 +1,52 @@
 package com.example.pointofsale
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class OutputActivity : AppCompatActivity() {
+
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var itemArrayList: ArrayList<Item>
+
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_output)
 
-        val name = intent.getStringExtra("name")
-        val qty = intent.getStringExtra("qty")
-        val price = intent.getStringExtra("price")
-        val total = intent.getStringExtra("total")
+        val name = intent.getStringArrayListExtra("itemList")
+        val qty = intent.getStringArrayListExtra("itemQty")
+        val price = intent.getStringArrayListExtra("itemPrice")
+        val total = intent.getStringArrayListExtra("itemTotalPrice")
+        val sum = intent.getDoubleExtra("sum", 0.0)
 
-        val tvName = findViewById<TextView>(R.id.tvName)
-        val tvQty = findViewById<TextView>(R.id.tvQty)
-        val tvPrice = findViewById<TextView>(R.id.tvPrice)
-        val tvDisplay = findViewById<TextView>(R.id.tvDisplay)
 
-        tvName.text = "Item Name is : $name"
-        tvQty.text = "Item Qty is : $qty"
-        tvPrice.text = "Item price is : $price"
-        tvDisplay.text = "Total Price is : $total"
+        val sumTotal = findViewById<TextView>(R.id.sumOutput)
+
+        sumTotal.text = "Total Price is : $sum"
+
+        recyclerView = findViewById<RecyclerView>(R.id.outputRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        itemArrayList = ArrayList()
+
+        for (index in name?.indices!!) {
+            val itemInfo = Item(name[index], qty?.get(index) ?:toString(),
+                price!![index], total!![index])
+            itemArrayList.add(itemInfo)
+        }
+
+        val myAdapter = MyAdapter(itemArrayList, this)
+        recyclerView.adapter = myAdapter
+
+
+
+
+
+
+
 
 
 

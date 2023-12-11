@@ -28,48 +28,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="9dp"
                 android:gravity="center"
-                android:padding="15dp"
-                android:text="WelCome to POS Output Screen"
-                android:textSize="30sp" />
-
-
-            <TextView
-                android:id="@+id/tvName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginEnd="9dp"
-                android:padding="15dp"
+                android:padding="10dp"
+                android:text="@string/welcome_text_output"
                 android:textSize="30sp" />
 
             <TextView
-                android:id="@+id/tvQty"
+                android:id="@+id/sumOutput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:padding="15dp"
-                android:textSize="30sp" />
+                android:padding="10dp"
+                android:gravity="center"
+                android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/tvPrice"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:padding="15dp"
-                android:textSize="30sp" />
 
-            <TextView
-                android:id="@+id/tvDisplay"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:padding="15dp"
-                android:textSize="30sp" />
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/outputRecyclerView"
+                    />
+
+            </LinearLayout>
 
         </LinearLayout>
 
