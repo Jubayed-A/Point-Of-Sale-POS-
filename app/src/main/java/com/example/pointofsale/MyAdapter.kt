@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class MyAdapter (val itemArrayList: ArrayList<Item>, val context: Activity) :
+class MyAdapter(val itemArrayList: ArrayList<Item>, val context: Activity) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val iName = itemView.findViewById<TextView>(R.id.itemName)

@@ -33,25 +33,15 @@ class OutputActivity : AppCompatActivity() {
         itemArrayList = ArrayList()
 
         for (index in name?.indices!!) {
-            val itemInfo = Item(name[index], qty?.get(index) ?:toString(),
-                price!![index], total!![index])
+            val itemInfo = Item(
+                name[index], qty?.get(index) ?: toString(),
+                price!![index], total!![index]
+            )
             itemArrayList.add(itemInfo)
         }
 
         val myAdapter = MyAdapter(itemArrayList, this)
         recyclerView.adapter = myAdapter
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

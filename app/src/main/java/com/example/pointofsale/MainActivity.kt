@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             val qty = itemQty.text.toString().toFloatOrNull()
             val price = itemPrice.text.toString().toFloatOrNull()
 
-            if (name.isNotEmpty() && qty !== null && price !== null){
+            if (name.isNotEmpty() && qty !== null && price !== null) {
 
                 itemList.add("Item name is : $name")
                 itemQtyArray.add("Item Qty is : $qty")
@@ -51,19 +51,18 @@ class MainActivity : AppCompatActivity() {
                 itemPrice.text.clear()
                 itemName.requestFocus()
 
-            } else{
+            } else {
                 Toast.makeText(this, "Please input all the filled", Toast.LENGTH_SHORT).show()
             }
         }
-
-
 
 
         // btn confirm code here
         itemConfirm.setOnClickListener {
 
             if (itemList.isNotEmpty() && itemQtyArray.isNotEmpty() && itemPriceArray.isNotEmpty()
-                && itemTotalPrice.isNotEmpty()){
+                && itemTotalPrice.isNotEmpty()
+            ) {
 
 
                 // for sum calculate of all item
@@ -80,9 +79,9 @@ class MainActivity : AppCompatActivity() {
                 intentOutput.putStringArrayListExtra("itemQty", ArrayList(itemQtyArray))
                 intentOutput.putStringArrayListExtra("itemPrice", ArrayList(itemPriceArray))
                 intentOutput.putStringArrayListExtra("itemTotalPrice", ArrayList(itemTotalPrice))
-                intentOutput.putExtra("sum",sum)
+                intentOutput.putExtra("sum", sum)
                 startActivity(intentOutput)
-            } else{
+            } else {
                 Toast.makeText(this, "Please Input all the fill.", Toast.LENGTH_SHORT).show()
             }
 

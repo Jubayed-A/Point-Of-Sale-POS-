@@ -103,8 +103,8 @@
                         android:background="@drawable/custom_shape"
                         android:hint="Enter Item Qty Here"
                         android:inputType="number"
-                        android:textSize="24sp"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
 
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -137,8 +137,8 @@
                         android:background="@drawable/custom_shape"
                         android:hint="Enter Item Price Here"
                         android:inputType="number"
-                        android:textSize="24sp"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
 
 
                 </com.google.android.material.textfield.TextInputLayout>
