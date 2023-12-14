@@ -35,6 +35,17 @@
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
+            <!--    welcome img -->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pos_icon" />
+
             <!--    design section -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -42,30 +53,21 @@
                 android:layout_margin="10dp"
                 android:orientation="vertical">
 
-                <!--       Item name text here      -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="item Name"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-
                 <!--       Item name here      -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    app:endIconMode="clear_text">
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/item_name">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/itemName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
                         android:background="@drawable/custom_shape"
                         android:hint="Enter Item Name Here"
                         android:inputType="text"
@@ -76,30 +78,20 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-                <!--       Item qty text here      -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="item Qty"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-
                 <!--       Item qty here      -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    app:endIconMode="clear_text">
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/square_q_10456966">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/itemQty"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
                         android:background="@drawable/custom_shape"
                         android:hint="Enter Item Qty Here"
                         android:inputType="number"
@@ -110,25 +102,14 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-                <!--       Item price text here      -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="item Price"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-
                 <!--       Item price here      -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    app:endIconMode="clear_text">
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/price_icon">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/itemPrice"

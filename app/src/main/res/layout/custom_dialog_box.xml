@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="5dp"
-    android:gravity="center"
-    android:orientation="vertical">
 
-    <!--    card view design -->
+    <!--card view design-->
     <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="10dp"
         app:strokeColor="#673AB7">
@@ -23,15 +16,17 @@
             android:layout_margin="10dp"
             android:orientation="vertical">
 
+            <!--welcome text for cash on delivery-->
             <TextView
-                android:id="@+id/bankingText"
+                android:id="@+id/welcomeCash"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:gravity="center"
                 android:padding="15dp"
-                android:text="Cash On Dalivary Payment Method"
-                android:textSize="30sp" />
+                android:text="Cash On Delivery Payment Method"
+                android:textSize="20sp" />
 
 
             <LinearLayout
@@ -39,13 +34,28 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <!--  Cash on delivery image  -->
+                <ImageView
+                    android:id="@+id/cashImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/confirm_notice" />
 
-
-
+                <!--  Cash on delivery description  -->
+                <TextView
+                    android:id="@+id/cashDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="@string/cash_On_delivery"
+                    android:textSize="16sp" />
 
                 <!--Button Code here-->
                 <Button
-                    android:id="@+id/btnBuy"
+                    android:id="@+id/btnBuyCash"
                     android:layout_width="220dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -62,5 +72,3 @@
     </com.google.android.material.card.MaterialCardView>
 
 
-
-</LinearLayout>

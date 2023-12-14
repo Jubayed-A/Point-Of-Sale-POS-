@@ -2,15 +2,18 @@ package com.example.pointofsale
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import cn.pedant.SweetAlert.SweetAlertDialog
 
 class OutputActivity : AppCompatActivity() {
 
@@ -36,37 +39,34 @@ class OutputActivity : AppCompatActivity() {
         paymentList.setOnItemClickListener { parent, view, position, id ->
             val selectedPayment = parent.getItemAtPosition(position).toString()
 //            Toast.makeText(this, paymentList.text, Toast.LENGTH_SHORT).show()
-            when(selectedPayment){
+            when (selectedPayment) {
                 "Bank System" -> {
                     // bank activity create
                     val intentBank = Intent(this, BankActivity::class.java)
                     startActivity(intentBank)
                 }
-                "Cash On Delivery" ->{
-                    // custom alert box show
-                    val alertDialog = AlertDialog.Builder(this)
-                        .setTitle("Bank System Payment")
-                        .setMessage("Custom Alert Dialog for Bank System Payment")
-                        .setPositiveButton("OK") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
 
-                    alertDialog.show()
+                "Cash On Delivery" -> {
+                    // sweet custom alert box show
+                    SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
+                        .setTitleText("You Order is Cash On Delivery")
+                        .setContentText("Your Order is ready to payment with cash on delivery after the delivery your order is Successfully")
+                        .show()
+
                 }
-                "Mobile Banking" ->{
+
+                "Mobile Banking" -> {
                     val intentMobile = Intent(this, MobileActivity::class.java)
                     startActivity(intentMobile)
                 }
-                else ->{
-                    Toast.makeText(this, "Selected payment: $selectedPayment", Toast.LENGTH_SHORT).show()
+
+                else -> {
+                    Toast.makeText(this, "Selected payment: $selectedPayment", Toast.LENGTH_SHORT)
+                        .show()
                 }
             }
 
         }
-
-
-
 
 
         val name = intent.getStringArrayListExtra("itemList")

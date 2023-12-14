@@ -9,7 +9,7 @@
     android:padding="5dp"
     tools:context=".OutputActivity">
 
-
+    <!--scrollview code added-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -20,6 +20,7 @@
             android:orientation="vertical"
             android:padding="5dp">
 
+            <!--item output section code here-->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -69,6 +70,7 @@
 
             </com.google.android.material.card.MaterialCardView>
 
+            <!--payment section code here-->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,6 +85,7 @@
                     android:layout_margin="10dp"
                     android:orientation="vertical">
 
+                    <!--payment welcome text-->
                     <TextView
                         android:id="@+id/welcomePayment"
                         android:layout_width="match_parent"
@@ -93,20 +96,20 @@
                         android:text="Payment Method"
                         android:textSize="30sp" />
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
-                        <!--choose semester-->
+                        <!--choose payment method-->
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                             android:layout_width="match_parent"
                             android:layout_height="57dp"
                             android:layout_marginTop="5dp"
                             app:endIconDrawable="@drawable/arrow_down_icon"
-                            app:endIconTint="@color/black">
+                            app:endIconTint="@color/black"
+                            app:startIconDrawable="@drawable/wallet_icon">
 
                             <AutoCompleteTextView
                                 android:id="@+id/autoItem"
@@ -118,7 +121,6 @@
 
                         </com.google.android.material.textfield.TextInputLayout>
 
-
                     </LinearLayout>
 
                 </LinearLayout>
@@ -128,6 +130,5 @@
         </LinearLayout>
 
     </ScrollView>
-
 
 </LinearLayout>
