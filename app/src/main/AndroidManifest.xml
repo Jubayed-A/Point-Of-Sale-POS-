@@ -17,7 +17,7 @@
             android:name=".LogIn.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".SmartPhone_Activity"
+            android:name=".MainCategoryActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
