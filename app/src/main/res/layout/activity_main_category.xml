@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainCategoryActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollMainCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--progressBar for mainCategory-->
+            <ProgressBar
+                android:id="@+id/mainCategoryProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <!--recycler view  for Special product-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSpecialProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--text view  for Best Deals Product-->
+            <TextView
+                android:id="@+id/tvBestDealsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Best Deals"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="@id/rvSpecialProduct"
+                app:layout_constraintStart_toStartOf="@id/rvSpecialProduct"
+                app:layout_constraintTop_toBottomOf="@id/rvSpecialProduct" />
+
+            <!--recycler view  for best Deals product-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBestDealsProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="@id/rvSpecialProduct"
+                app:layout_constraintStart_toStartOf="@id/rvSpecialProduct"
+                app:layout_constraintTop_toBottomOf="@id/tvBestDealsText" />
+
+            <!--text view  for Best product-->
+            <TextView
+                android:id="@+id/tvBestProductText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Best Prdouct"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="@id/rvBestDealsProduct"
+                app:layout_constraintHorizontal_bias="0.022"
+                app:layout_constraintStart_toStartOf="@id/rvBestDealsProduct"
+                app:layout_constraintTop_toBottomOf="@id/rvBestDealsProduct" />
+
+            <!--recycler view  for best product-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBestProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:overScrollMode="never"
+                app:layout_constraintEnd_toEndOf="@id/rvBestDealsProduct"
+                app:layout_constraintStart_toStartOf="@id/rvBestDealsProduct"
+                app:layout_constraintTop_toBottomOf="@id/tvBestProductText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

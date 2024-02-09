@@ -3,9 +3,9 @@ package com.example.pointofsale
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class SmartPhone_Activity : AppCompatActivity() {
+class MainCategoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_smart_phone)
+        setContentView(R.layout.activity_main_category)
     }
 }
