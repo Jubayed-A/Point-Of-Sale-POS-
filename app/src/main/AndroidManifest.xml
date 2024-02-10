@@ -14,7 +14,7 @@
         tools:replace="android:icon"
         tools:targetApi="31">
         <activity
-            android:name=".LogIn.SignUpActivity"
+            android:name=".ui.LogIn.SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".MainCategoryActivity"
