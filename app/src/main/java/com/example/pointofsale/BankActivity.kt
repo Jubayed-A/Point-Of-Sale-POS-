@@ -23,7 +23,7 @@ class BankActivity : AppCompatActivity() {
         val bankPaymentList = findViewById<AutoCompleteTextView>(R.id.bankList)
         bankPaymentList.setAdapter(arrayAdapter)
 
-        bankPaymentList.setOnItemClickListener { parent, view, position, id ->
+        bankPaymentList.setOnItemClickListener { parent, _, position, _ ->
             val selectedPayment = parent.getItemAtPosition(position).toString()
             Toast.makeText(this, "You Selected $selectedPayment", Toast.LENGTH_SHORT).show()
 

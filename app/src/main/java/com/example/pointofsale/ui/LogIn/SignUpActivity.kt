@@ -1,4 +1,4 @@
-package com.example.pointofsale.LogIn
+package com.example.pointofsale.ui.LogIn
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
